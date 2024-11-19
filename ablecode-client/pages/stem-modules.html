@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STEM Modules</title>
+    <link rel="stylesheet" href="../assets/styles/styles-stem-modules.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                 <li><a href="scratch-programming.html">Scratch Programming</a></li>
+            <li><a href="stem-modules.html">STEM Modules</a></li>
+                   <li><a href="python-basics.html">Python Basics</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>STEM Modules</h1>
+        <p>Explore interactive PHET simulations categorized by subjects:</p>
+        <select id="subjectFilter" onchange="filterSimulations()">
+            <option value="all">All Subjects</option>
+            <option value="physics">Physics</option>
+            <option value="math">Math</option>
+        </select>
+        <div id="simulationsList">
+            <!-- Example of PHET simulations list -->
+            <div class="simulation" data-category="physics">
+                <h3>Force and Motion</h3>
+                <button onclick="openSimulation('https://phet.colorado.edu/simulations/force-and-motion')">Try Now</button>
+            </div>
+            <div class="simulation" data-category="math">
+                <h3>Graphing Lines</h3>
+                <button onclick="openSimulation('https://phet.colorado.edu/simulations/graphing-lines')">Try Now</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 STEM Learning for Disabled Children. All rights reserved.</p>
+    </footer>
+    <script src="assets/scripts/main.js"></script>
+</body>
+</html>
