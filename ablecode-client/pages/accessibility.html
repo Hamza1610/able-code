@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessibility Settings</title>
+    <link rel="stylesheet" href="../assets/styles/styles-accessibility.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="stem-modules.html">STEM Modules</a></li>
+                <li><a href="scratch-programming.html">Scratch Programming</a></li>
+                <li><a href="python-basics.html">Python Basics</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Accessibility Settings</h1>
+        
+        <h2>Font Size</h2>
+        <input type="range" id="fontSize" min="10" max="30" value="16">
+        
+        <h2>Color Contrast</h2>
+        <button onclick="toggleContrast()">Toggle High Contrast</button>
+
+        <h2>Text-to-Speech</h2>
+        <button onclick="toggleSpeech()">Toggle Text-to-Speech</button>
+    </main>
+    <footer>
+        <p>&copy; 2024 STEM Learning for Disabled Children. All rights reserved.</p>
+    </footer>
+    <script src="assets/scripts/main.js"></script>
+</body>
+</html>
