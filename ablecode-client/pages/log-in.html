@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
     <link rel="stylesheet" href="../styles/components/styles-log-in.css">
-    <script type="module" src="../lib/js/auth_sdk/index.js"></script>
-    <script src="../scripts/"></script>
+    <link rel="stylesheet" href="../styles/components/modal.module.css">
+    <script src="../scripts/sign_up.js" type="module"></script>
 </head>
 <body>
     <header>
@@ -22,25 +22,52 @@
     </header>
     <main>
         <h1>Create an Account</h1>
-        <form action="submit_sign_up.php" method="post">
-            <label for="name">Full Name:</label><br>
-            <input type="text" id="name" name="name" required><br>
+        <form>
             <label for="email">Email:</label><br>
             <input type="email" id="email" name="email" required><br>
             <label for="password">Password:</label><br>
             <input type="password" id="password" name="password" required><br>
             <button type="submit">Sign Up</button>
         </form>
-        <div class="container">
-            <h1>Firebase Authentication</h1>
-            <button id="signInButton" >Sign In</button>
-            <!-- This is the container where FirebaseUI will render the auth UI -->
-            <div id="firebaseui-auth-container"></div>
+        <h1>Firebase Authentication</h1>
+        <div class="" style="display: flex; flex-direction: column; justify-content: center;">
+            <div style="display: flex; flex-direction: row; justify-content: center;">
+                <button id="sign-in-email-password" class="auth-button">Sign In</button>
+                <button id="sign-up-email-password" class="auth-button">Sign Up</button>
+                <button id="sign-out-account" class="auth-button">Sign Out</button>
+            </div>
+        </div>
+        <!-- Google Auth botton -->
+        <div class="" style="display: flex; flex-direction: column; justify-content: center;">
+            <div style="display: flex; flex-direction: row; justify-content: center;">
+                <button id="sign-in-google" class="auth-button">Sign In Google</button>
+                <button id="sign-up-google" class="auth-button">Sign Up with Google</button>
+            </div>
+        </div>
+        <!-- Micosoft Auth botton -->
+        <div class="" style="display: flex; flex-direction: column; justify-content: center;">
+            <div style="display: flex; flex-direction: row; justify-content: center;">
+                <button id="sign-in-microsoft" class="auth-button">Sign In with Microsoft</button>
+                <button id="sign-up-microsoft" class="auth-button">Sign Up with Microsoft</button>
+            </div>
         </div>
     </main>
+
+    <!-- Modal -->
+     <!-- Modal is initially hidden -->
+     <div id="sign-out-modal" class="hidden">
+        <div class="modal-content">
+            <h2>Are you sure you want to sign out?</h2>
+            <div class="modal-actions">
+                <button class="confirm" id="confirm-sign-out">Yes, Sign Out</button>
+                <button class="cancel" id="cancel-sign-out">Cancel</button>
+            </div>
+        </div>
+    </div>
+
     <footer>
         <p>&copy; 2024 STEM Learning for Disabled Children. All rights reserved.</p>
     </footer>
-    <script src="assets/scripts/main.js"></script>
+    <script src="../scripts/main.js"></script>
 </body>
 </html>
