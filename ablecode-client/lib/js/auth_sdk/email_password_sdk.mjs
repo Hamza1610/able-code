@@ -1,11 +1,14 @@
+import { clearUser, saveUser } from './utils.js';
 import { auth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut  } from './firebase.-config.mjs'
 
 function signUpWithEmailPassword(email, password) {
 
+    console.log("Email and ppassword: ", email, password);
     createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
         // Signed up 
         const user = userCredential.user;
+        saveUser(user)
      })
     .catch((error) => {
         const errorCode = error.code;
@@ -17,10 +20,12 @@ function signUpWithEmailPassword(email, password) {
 
 function signInWithEmailPassword(email, password) {
 
+    console.log("Email and ppassword: ", email, password);
     signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
         // Signed In
         const user = userCredential.user;
+        saveUser(user)
     })
     .catch((error) => {
         const errorCode = error.code;
@@ -30,15 +35,16 @@ function signInWithEmailPassword(email, password) {
     });
 }
 
-function signOutAccount(params) {
+function signOutAccount() {
     signOut(auth)
     .then(() => {
         // Sign-out successful.
-        console.log("SignOut Successful");  
+        clearUser()
     }).catch((error) => {
         // An error happened.
         console.log("ERROR: ", error);        
     });
 }
+
 
 export  { signUpWithEmailPassword, signInWithEmailPassword, signOutAccount }
