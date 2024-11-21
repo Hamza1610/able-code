@@ -4,7 +4,7 @@ import { initializeApp } from 'https://www.gstatic.com/firebasejs/11.0.2/firebas
 import { getAnalytics } from 'https://www.gstatic.com/firebasejs/11.0.2/firebase-analytics.js'
 
 // Add Firebase products that you want to use
-import { getAuth, signInWithPopup, GoogleAuthProvider } from 'https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js'
+import { getAuth, signInWithPopup, GoogleAuthProvider, OAuthProvider, signInWithEmailAndPassword,createUserWithEmailAndPassword, signOut } from 'https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js'
 import { getFirestore } from 'https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js'
 
     // TODO: Replace the following with your app's Firebase project configuration
@@ -23,4 +23,4 @@ const app = initializeApp(firebaseConfig);
 // Initialize Firebase Authentication and get a reference to the service
 const auth = getAuth(app);
 
-export  { auth, signInWithPopup, GoogleAuthProvider, getAnalytics, getFirestore }
+export  { auth, signInWithPopup, GoogleAuthProvider, OAuthProvider,createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut }
