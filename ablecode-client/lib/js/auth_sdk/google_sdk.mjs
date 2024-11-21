@@ -1,3 +1,4 @@
+import { saveUser } from './utils.js';
 import { auth, signInWithPopup, GoogleAuthProvider } from './firebase.-config.mjs'
 
  
@@ -12,8 +13,8 @@ function signUpWithGoogle() {
         const token = credential.accessToken;
         // The signed-in user info.
         const user = result.user;
-        // IdP data available using getAdditionalUserInfo(result)
-        // ...
+        saveUser(user);
+
     }).catch((error) => {
         // Handle Errors here.
         const errorCode = error.code;
@@ -35,7 +36,7 @@ function signInWithGoogle() {
         const token = credential.accessToken;
         // The signed-in user info.
         const user = result.user;
-        
+        saveUser(user)
     }).catch((error) => {
         // Handle Errors here.
         const errorCode = error.code;
