@@ -1,0 +1,49 @@
+/* Scoped styles for the modal */
+#sign-out-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensures it appears above all other elements */
+}
+
+#sign-out-modal.hidden {
+    display: none; /* Hide the modal by default */
+}
+
+#sign-out-modal .modal-content {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2em;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#sign-out-modal .modal-actions {
+    margin-top: 1em;
+}
+
+#sign-out-modal .modal-actions button {
+    padding: 0.5em 1em;
+    margin: 0 0.5em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#sign-out-modal button.confirm {
+    background-color: #f44336; /* Red for confirmation */
+    color: white;
+}
+
+#sign-out-modal button.cancel {
+    background-color: #e0e0e0; /* Gray for cancel */
+    color: black;
+}
