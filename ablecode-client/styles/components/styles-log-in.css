@@ -9,6 +9,14 @@ header {
     padding: 15px 0;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
 nav ul {
     display: flex;
     justify-content: center;
@@ -41,6 +49,15 @@ input {
     margin: 10px 0;
     border-radius: 5px;
     border: 1px solid #ddd;
+}
+  
+#signInButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
 }
 
 footer {
