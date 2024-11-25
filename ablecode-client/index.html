@@ -1,36 +1,490 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+
+  <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STEM Learning for Disabled Children</title>
-    <link rel="stylesheet" href="./styles/components/styles-home.css">
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>AbleCode</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="./styles/index.css">
+    <link href="./lib/css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="./lib/css/fontawesome/fontawesome.css">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/animated.css">
+    <link rel="stylesheet" href="./styles/owl.css">
+<!--
+    
+TemplateMo 562 Space Dynamic
+
+https://templatemo.com/tm-562-space-dynamic
+
+-->
+  </head>
+
 <body>
-    <header>
-        <nav>
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s" id="yellow-background">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <!-- ***** Logo Start ***** -->
+            <a href="index.html" class="logo">
+              <h4 class="green-text">Able<span>Code</span></h4>
+            </a>
+            <!-- ***** Logo End ***** -->
+            <!-- ***** Menu Start ***** -->
+            <ul class="nav">
+              <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+              <li class="scroll-to-section"><a href="#about" class="green-text">About Us</a></li>
+              <li class="scroll-to-section"><a href="#courses" id="drop">Courses</a>
+                <ul id="dropdown">
+                  <li><a href="python.html">Python Programming</a></li>
+                  <li><a href="phet.html">PHET Simulation</a></li>
+                  <li><a href="python.html">Scratch Programming</a></li>
+                  <li><a href="python.html">Accessible Features</a></li>
+                  <li><a href="python.html" style="display: none;">Scratch Programming</a></li>
+                </ul>
+              </li>
+              <li class="scroll-to-section"><a href="#blog">Blog</a></li> 
+              <li class="scroll-to-section"><a href="#contact">Contact Us</a></li> 
+              <li class="scroll-to-section"><div class="main-red-button"><a href="./pages/log-in.html">Sign In</a></div></li> 
+            </ul>        
+            <a class='menu-trigger'>
+                <span>Menu</span>
+            </a>
+            <!-- ***** Menu End ***** -->
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+  <div id="header">
+  <div class="main-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s" >
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="col-lg-6 align-self-center">
+              <div class="left-content header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
+                <div class="main-red-button" id="sign-in"><a href="./pages/log-in.html">Sign In</a></div>
+                <h6>Welcome to Able-Code</h6>
+                <h2 class="yellow-text">We Make Digital Ideas &amp; <span>STEM Education</span> Accessible</h2>
+                <!-- <p id="p">Able-Code is a comprehensive online platform offering interactive STEM modules, Scratch programming tutorials, Python lessons, and more. Our goal is to make STEM education engaging and accessible to students everywhere.</p> -->
+                <form id="search" action="#" method="GET">
+                  <fieldset>
+                    <input id="yellow-background" value="ablecode@example.com" type="address" name="address" class="email" autocomplete="on" class="green-text" required>
+                  </fieldset>
+                  <fieldset>
+                    <a href="sign in.html"><button type="submit" class="main-button" id="green-background">Start Learning</button></a>
+                  </fieldset>
+                </form>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+                <img src="./assets/images/home.jpg" alt="team meeting">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div id="services" class="our-services section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 align-self-center  wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s">
+          <div class="left-image">
+            <img src="assets/images/services-left-image.png" alt="">
+          </div>
+        </div>
+        <div class="col-lg-6 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.2s">
+          <div class="section-heading">
+            <h2 class="yellow-text">Empowering Students with <em>STEM</em> Education &amp; <span>Technology</span></h2>
+            <p class="green-text" style="font-size: 3vmin;">Our platform is designed to offer a comprehensive educational experience in STEM, from interactive simulations to hands-on coding tutorials. We strive to provide students with the skills they need to succeed in the digital age.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<section id="about">
+  <!-- about us -->
+  <div  data-wow-duration="1s" data-wow-delay="0.5s">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 align-self-center wow fadeInLeft" data-wow-duration="0.5s" data-wow-delay="0.25s">
+          <div class="section-heading">
+            <h2 style="text-align: center; color: whitesmoke;">ABOUT US</h2>
+            <p class="yellow-text">At Able-Code, we are passionate about revolutionizing STEM education by making it interactive, accessible, and fun. </p><h5 class="yellow-text">Our mission</h3><p class="yellow-text">our mission is to empower students across Nigeria with the tools and resources they need to excel in Science, Technology, Engineering, and Mathematics (STEM) fields. Through a combination of interactive PHET simulations, engaging coding tutorials, and hands-on lessons, we aim to create an environment where learning is not just about memorization but about curiosity, creativity, and problem-solving.
+
+              Our team is made up of dedicated educators, developers, and STEM enthusiasts who are committed to making learning an exciting and inclusive experience for all. We believe that every student, regardless of their background, should have the opportunity to develop the skills needed for success in today’s technology-driven world. With a focus on accessibility, we’ve designed our platform to be user-friendly and adaptable to the diverse needs of students.
+              
+              Whether you're a beginner or an advanced learner, our platform is here to support you in your educational journey. Together, we’re building a future where all students can thrive and become the innovators of tomorrow.</p>
+          </div>
+        </div>
+        <div class="col-lg-6 wow fadeInRight" data-wow-duration="0.5s" data-wow-delay="0.25s" id="flex">
+        <div class="col-lg-12" id="row">
+          <div class="text">
+            <h2 style="text-align: center; color: whitesmoke;" >OUR VISION</h2>          
+            <p class="yellow-text">Empowering students to excel in STEM education through an inclusive and and interactive online platform, offering PHET simulation , Scratch programming, python programming basics and personalized progress tracking, while ensuring accessibility and support through resources, blogs, and community engagement. </p>
+          </div>
+        </div>
+        <div class="col-lg-12" id="row">
+          <img src="./assets/images/service-details-01.jpg">
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+  <!-- end of aBOUT US -->
+
+  <!-- teams -->
+  <div class="our-portfolio section" id="bg-t">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+          <div class="section-heading  wow bounceIn" data-wow-duration="1s" data-wow-delay="0.2s">
+            <h3 class="marge-b">MEET TEAM</h3>
+          </div>
+        </div>
+      </div>
+      <div class="row" id="team">
+        <div class="col-lg-3 col-sm-6">
+          <a href="#">
+            <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.4s">
+              <div class="hidden-content">
+                <h4>MUHAMMAD HAMZA</h4>
+              </div>
+              <div class="" id="team-c">
+                <img src="assets/images/muhammad.jpg" alt="">
+                <h4 class="center">MUHAMMAD HAMZA</h4>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <a href="#">
+            <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+              <div class="hidden-content">
+                <h4>IBRAHIM RABI'U</h4>
+              </div>
+              <div class="hto" id="team-c">
+                <img src="assets/images/passport_2024.JPG" alt="">
+                <h4 class="center">IBRAHIM RABI'U</h4>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <a href="#">
+            <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+              <div class="hidden-content">
+                <h4>AHMAD IBRAHIM</h4>
+              </div>
+              <div class="" id="team-c">
+                <img src="assets/images/boy.png" alt="">
+                <h4 class="center">AHMAD IBRAHIM</h4>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end of teams -->
+</section>
+
+  <div class="about-us section" id="courses">
+    <div class="container">
+      <h2 class="yellow-text" id="co">OUR COURSES</h2>
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="left-image wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
+            <img src="assets/images/about-left-image.png" alt="person graphic">
+          </div>
+        </div>
+        <div class="col-lg-8 align-self-center">
+          <div class="services">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+                  <div class="icon">
+                    <img src="assets/images/service-icon-01.png" alt="reporting">
+                  </div>
+                  <div class="right-text">
+                    <h4 class="green-text">PHET simulation</h4>
+                    <p class="yellow-text">Explore the PHET simulation through interactive lessons. Our tutorials will guide you step-by-step through interactive exercises</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.7s">
+                  <div class="icon">
+                    <img src="assets/images/service-icon-02.png" alt="">
+                  </div>
+                  <div class="right-text">
+                    <h4 class="green-text">Scratch Programming</h4>
+                    <p class="yellow-text">Learn the basics of programming with block-based coding using Scratch. Our tutorials will guide you step-by-step through interactive projects.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.9s">
+                  <div class="icon">
+                    <img src="assets/images/service-icon-03.png" alt="">
+                  </div>
+                  <div class="right-text">
+                    <h4 class="green-text">Python Basics</h4>
+                    <p class="yellow-text">Explore Python basics through interactive lessons and exercises, ideal for beginners and those looking to improve their programming skills.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="1.1s">
+                  <div class="icon">
+                    <img src="assets/images/service-icon-04.png" alt="">
+                  </div>
+                  <div class="right-text">
+                    <h4 class="green-text">Accessibility Features</h4>
+                    <p class="yellow-text">Our platform includes a variety of accessibility settings such as font size adjustments, color contrast options, and text-to-speech support to ensure every student can benefit.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="faq" class="our-portfolio section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+          <div class="section-heading  wow bounceIn" data-wow-duration="1s" data-wow-delay="0.2s">
+            <h2 class="red-text">Frequenly Asked Questions</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-3 col-sm-6">
+          <a href="#">
+            <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+              <div class="hidden-content">
+                <p class="yellow-text">this plartform is your ultimate learning playgrounds, where STEM meets fun! Dive into interactive modules, coding adventure and more</p>
+              </div>
+              <div class="showed-content" id="yellow-background">
+                <h4 class="green-text" id="upper">What is this plartform about?</h4>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <a href="#">
+            <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.4s">
+              <div class="hidden-content">
+                <p class="yellow-text">just hit the shiny sign in button and follow magic It’s as easy as pie!.</p>
+              </div>
+              <div class="showed-content" id="yellow-background">
+                <h4 class="green-text" id="upper">How can i sign up?</h4>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <a href="#">
+            <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+              <div class="hidden-content">
+                <p class="yellow-text">nope! All the fun is absolutely free!.</hp>
+              </div>
+              <div class="showed-content" id="yellow-background">
+                <h4 class="green-text" id="upper">Are there any cost involved?</h4>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <a href="#">
+            <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.6s">
+              <div class="hidden-content">
+                <p class="yellow-text">don't sweat it! Our team is here to rescue you just fill the contact us form and hit send message button.</p>
+              </div>
+              <div class="showed-content" id="yellow-background">
+                <h4 class="green-text" id="upper">What if i get stuck?</h4>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="blog" class="our-blog section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.25s">
+          <div class="section-heading">
+            <h2 class="green-text">Check Out What’s Trending in Our Latest <span>News</span></h2>
+            <p>Stay up-to-date with the latest trends, tutorials, and success stories in the world of STEM education, coding, and digital learning.</p>
+          </div>
+        </div>
+        <div class="col-lg-6 wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.25s">
+          <div class="top-dec">
+            <img src="assets/images/blog-dec.png" alt="Educational Blog Decoration">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.25s">
+          <div class="left-image">
+            <a href="#"><img src="assets/images/IMG-20241122-WA0001.jpg" alt="Latest Trends in STEM"></a>
+            <div class="info">
+              <div class="inner-content">
+                <ul>
+                  <li><i class="fa fa-calendar"></i> 2 Dec 2024</li>
+                  <li><i class="fa fa-users"></i> Able-Code</li>
+                  <li><i class="fa fa-folder"></i> STEM Education</li>
+                </ul>
+                <a href="#"><h4>The Future of Coding: How STEM Education is Shaping the Next Generation</h4></a>
+                <p>Discover how the world of STEM is evolving with interactive learning methods and the importance of coding for the future workforce.</p>
+                <div class="main-blue-button">
+                  <a href="#about" id="yellow-background" class="green-text">learn more</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.25s">
+          <div class="right-list">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="pages/about.html">About Us</a></li>
-                <li><a href="pages/stem-modules.html">STEM Modules</a></li>
-                <li><a href="pages/scratch-programming.html">Scratch Programming</a></li>
-                <li><a href="pages/python-basics.html">Python Basics</a></li>
-                <li><a href="pages/resources.html">Resources</a></li>
-                <li><a href="pages/contact.html">Contact Us</a></li>
+              <li>
+                <div class="left-content align-self-center">
+                  <span><i class="fa fa-calendar"></i> 18 Dec 2024</span>
+                  <a href="#"><h4>Exploring Python: Why It’s the Best First Language for Kids</h4></a>
+                  <p>Learn why Python is an excellent language to start your coding journey and how it simplifies complex concepts for beginners.</p>
+                </div>
+                <div class="right-image">
+                  <a href="#"><img src="assets/images/IMG-20241120-WA0023.jpg" alt="Python Tutorial for Kids"></a>
+                </div>
+              </li>
+              <li>
+                <div class="left-content align-self-center">
+                  <span><i class="fa fa-calendar"></i> 14 Jan 2021</span>
+                  <a href="#"><h4>Hands-On Learning: The Importance of STEM Kits for Students</h4></a>
+                  <p>Explore how STEM kits can empower students to learn through practical experiments and hands-on activities that enhance their understanding.</p>
+                </div>
+                <div class="right-image">
+                  <a href="#"><img src="assets/images/blog-thumb-01.jpg" alt="STEM Kits for Students"></a>
+                </div>
+              </li>
+              <li>
+                <div class="left-content align-self-center">
+                  <span><i class="fa fa-calendar"></i> 06 Jan 2021</span>
+                  <a href="#"><h4>The Rise of Interactive Learning Platforms for STEM</h4></a>
+                  <p>Interactive learning platforms are transforming STEM education. Learn how these platforms engage students and foster deeper understanding.</p>
+                </div>
+                <div class="right-image">
+                  <a href="#"><img src="assets/images/IMG-20241120-WA0025.jpg" alt="Interactive Learning Platforms"></a>
+                </div>
+              </li>
             </ul>
-        </nav>
-    </header>
-    <main>
-        <h1>Welcome to STEM Learning for Disabled Children</h1>
-        <p>Helping children with disabilities learn STEM subjects, including coding and interactive simulations.</p>
-        <button onclick="location.href='/pages/sign-up.html'">Sign Up</button>
-        <button onclick="location.href='/pages/log-in.html'">Log In</button>
-        <button onclick="location.href='/pages/about.html'">Learn More</button>
-        
-    </main>
-    <footer>
-        <p>&copy; 2024 STEM Learning for Disabled Children. All rights reserved.</p>
-    </footer>
-    <script src="assets/scripts/main.js"></script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="contact" class="contact-us section" >
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 align-self-center wow fadeInLeft" data-wow-duration="0.5s" data-wow-delay="0.25s">
+          <div class="section-heading">
+            <h2>Feel Free to Reach Out About Your <em>STEM Education Needs</em></h2>
+            <p>Have questions or need support? Reach out to us for personalized advice on our STEM modules, educational tools, or coding tutorials. We’re here to help you and your students succeed in the world of education and technology.</p>
+            <div class="phone-info">
+              <h4>For any enquiry, Call Us: <span><i class="fa fa-phone"></i> <a href="#">+234-906-931-9234</a></span></h4>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 wow fadeInRight" data-wow-duration="0.5s" data-wow-delay="0.25s">
+          <form id="contact" action="" method="post">
+            <div class="row">
+              <div class="col-lg-12">
+                <fieldset>
+                  <input type="name" name="name" id="name" placeholder="Your Name" required>
+                </fieldset>
+              </div>
+              <div class="col-lg-12">
+                <fieldset>
+                  <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email" required>
+                </fieldset>
+              </div>
+              <div class="col-lg-12">
+                <fieldset>
+                  <textarea name="message" id="message" placeholder="Your Message" required></textarea>
+                </fieldset>
+              </div>
+              <div class="col-lg-12">
+                <fieldset>
+                  <input type="submit" id="yellow-background" class="red-text">
+                </fieldset>
+              </div>
+            </div>
+            <div class="contact-dec">
+              <img src="assets/images/contact-decoration.png" alt="Contact decoration">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s" id="center">
+          <i class="fa fa-facebook fa-2x red-text"></i>
+          <i class="fa fa-github fa-2x red-text"></i>
+          <i class="fa fa-instagram fa-2x red-text"></i>
+          <i class="fa fa-twitter fa-2x red-text"></i>
+        </div>
+        <div class="col-lg-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
+          <p class="green-text">© Copyright 2024 AbleCode All Rights Reserved. 
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Scripts -->
+  <script src="./lib/js/jquery/jquery.min.js"></script>
+  <script src="./lib/css/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="./scripts/owl-carousel.js"></script>
+  <script src="./scripts/animation.js"></script>
+  <script src="./scripts/imagesloaded.js"></script>
+  <script src="./scripts/main.js"></script>
+
+  <!-- internal -->
+   <script>
+    const drop = document.getElementById('drop');
+    const dropdown = document.getElementById('dropdown');
+
+    drop.addEventListener(('click'), ()=>{
+      dropdown.style.display="block";
+    })
+   </script>
+
 </body>
 </html>
