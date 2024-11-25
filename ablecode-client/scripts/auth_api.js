@@ -71,7 +71,7 @@ class Client {
             },
             body: JSON.stringify({ email, password, returnSecureToken:true }),
         };
-
+              console.log('request made')
         const response = await this.fetchRequest(this.urls.emailAndPasswordSignInUrl, options);
         this.authStatus = true; // Assume successful sign-in implies authentication
         return response;
