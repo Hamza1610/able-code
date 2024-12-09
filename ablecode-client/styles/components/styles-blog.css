@@ -1,42 +1,111 @@
-/* Blog Page Styles */
-body {
-    background-color: #F4F4F9;
-}
 
-header {
-    background-color: #3a5f4e;
-    color: white;
-    padding: 15px 0;
-}
-
-nav ul {
+.umm{
+    width: 100vw;
+    height: max-content;
     display: flex;
-    justify-content: center;
-    list-style-type: none;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.lessons{
+    display: none;
+    position: fixed;
+    left: 12px;
+}
+.aside{
+    position: absolute;
+    left: 0;
+    width: 20%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background: whitesmoke;
+    position: fixed;
+    overflow-y: scroll;
+}
+.aside li{
+    list-style: none;
+    display: flex;
+    color: green;
+    font-size: 3vmin;
+    font-family: 'Courier New', Courier, monospace;
+}
+.aside img{
+    width: 30px;
+    height: 30px;
+}
+.main{
+    position: absolute;
+    right: 10%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
 }
 
-nav ul li {
-    margin: 0 15px;
-}
+.main textarea{
+    width: 100%;
+    height: 50vh;
+    overflow-y: scroll;
+    background: whitesmoke;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    color: rgba(0, 0, 0, 0.856);
+    font-size: 4vmin;
+    padding: 10px;
+    margin-top: 10px;
+    color: green;
 
-h1 {
-    font-size: 2.5em;
-    color: #3a5f4e;
-    text-align: center;
-    margin-top: 50px;
 }
-
-article {
-    background-color: #fff;
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-footer {
-    background-color: #3a5f4e;
+.main .btn{
+    width: 60%;
+    height: 50px;
+    background: yellow;
+    border: none;
+    border-radius: 20px;
+    box-sizing : rgb(rgba(245, 245, 245, 0.795), rgba(245, 245, 245, 0.795));
     color: white;
-    text-align: center;
-    padding: 15px;
+    font-weight: 900;
+    font-size: 5vmin;
+    font-family: 'Courier New', Courier, monospace;
+    align-self: center;
+    margin-top: 20px;
+}
+.main .btn:hover{
+    font-size: 4vmin;
+    font-weight: 900;
+    text-decoration: none;
+    color: green;
+    font-size: 5vmin;
+    background: red;
+    border: 2px solid whitesmoke;
+    border-radius: 10px;
+    transition: all 1s ease;
+    padding: 5px;
+}
+
+
+/* mobile */
+
+@media (max-width: 767px) {
+    .bt{
+        display: block;
+    }
+    .aside{
+        width: 80%;
+        height: max-content;
+        overflow: visible;
+    }
+}  .content{
+    overflow: visible;
+    width: 90vw;
+    height: max-content;
+    overflow: block;
+    background-color: yellow;
+}
+main{
+    width: 80%;
 }
