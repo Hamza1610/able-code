@@ -16,10 +16,8 @@
     
     <script src="../scripts/sign_up.js" type="module"></script>
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="../styles/index.css">
-    <link rel="stylesheet" href="../styles/components/styles-blog.css">
-    <link rel="stylesheet" href="../styles/components/styles-scratch-programming.css">
-    <link rel="stylesheet" href="../styles/components/styles-python-basics.css">
+     <link rel="stylesheet" href="../styles/components/styles-blog.css">
+     <link rel="stylesheet" href="../styles/index.css">
     <link href="../lib/css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="../lib/css/bootstrap/css/bootstrap.min.css.map" rel="stylesheet">
 
@@ -38,99 +36,91 @@ https://templatemo.com/tm-562-space-dynamic
   </head>
   <body>
     <!-- ***** Header Area Start ***** -->
-   <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s" id="yellow-background">
-     <div class="container">
-       <div class="row">
-         <div class="col-12">
-           <nav class="main-nav">
-             <!-- ***** Logo Start ***** -->
-             <a href="#" class="logo">
-               <h4 class="green-text">Able<span>Code</span></h4>
-             </a>
-             <!-- ***** Logo End ***** -->
-             <!-- ***** Menu Start ***** -->
-             <ul class="nav">
-               <li class="scroll-to-section" ><a href="python-basics.html" style="color: red !important;">Python</a></li>
-               <li class="scroll-to-section" ><a href="stem-modules.html" style="color: red !important;">PHET</a></li>
-               <li class="scroll-to-section" ><a href="accessibility.html" style="color: red !important;">Accessibility</a></li>
-               <li class="scroll-to-section" ><a href="accessibility.html" style="color: red !important;">Scratch</a></li>
-             </ul>        
-             <a class='menu-trigger'>
-                 <span>Menu</span>
-             </a>
-             <!-- ***** Menu End ***** -->
-           </nav>
-         </div>
-       </div>
-     </div>
-   </header>
-
-   <div class="our-portfolio section">
-    <div class="container">
-      <div class="umm">  
-        <aside class="aside">
-          <button class="bt">course content</button>
-          <div class="content">
-              <li>lesson 9 <i class="fa fa-play"></i></li>
-              <li>lesson 9 <i class="fa fa-play"></i></li>
-              <li>lesson 9 <i class="fa fa-play"></i></li>
-              <li>lesson 9 <i class="fa fa-play"></i></li>
-              <li>lesson 9 <i class="fa fa-play"></i></li>
-              <li>lesson 9 <i class="fa fa-play"></i></li>
-              <li>lesson 9 <i class="fa fa-play"></i></li>
-              <li>lesson 9 <i class="fa fa-play"></i></li>
-              <li>lesson 9 <i class="fa fa-play"></i></li>
-              <li>lesson 9 <i class="fa fa-play"></i></li>
-              <li>lesson 9 <i class="fa fa-play"></i></li>
-              <li>lesson 9 <i class="fa fa-play"></i></li>
-              <li>lesson 9 <i class="fa fa-play"></i></li>
-              <li>lesson 9 <i class="fa fa-play"></i></li>
-              <li>lesson 9 <i class="fa fa-play"></i></li>
-              <li>lesson 9 <i class="fa fa-play"></i></li>
-              <li>lesson 9 <i class="fa fa-play"></i></li>
-              <li>lesson 9 <i class="fa fa-play"></i></li>
-              <li>lesson 9 <i class="fa fa-play"></i></li>
-              <li>lesson 9 <i class="fa fa-play"></i></li>
-              <li>lesson 9 <i class="fa fa-play"></i></li>
-          </div>
-        </aside>
-             <form class="main" id="form">
-              <textarea name="text" id="text" placeholder="write your code here" required></textarea>
-              <button class="btn" id="btn"> run python </button>
-             </form>
-      </div>
-</div>
-</div>
-
-
-
-
-<script>
-  const button = document.querySelector('.bt');
-  const main = document.getElementById('form');
-  const content = document.querySelector('.content');
-
-// Add event listener to each button
-  button.addEventListener('click', () => {
-    // Get the parent card element
-    const card = button.parentNode;
-    
-    // Get the hidden text element
-    const hiddenText = card.querySelector('.content');
-    
-    // Toggle the display of the hidden text
-    hiddenText.style.display = hiddenText.style.display === 'block' ? 'none' : 'block';
-    
-    // Change the button text
-    button.textContent = hiddenText.style.display === 'block' ? 'hide content' : 'course content';
-  })
   
+    <!-- Navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#sidebar">
+        clrfjfhguwe
+          </button>
+          <a class="navbar-brand" href="#">Responsive Sidebar</a>
+          <a class="navbar-brand" href="#">Responsive Sidebar</a>
+          <a class="navbar-brand" href="#">Responsive Sidebar</a>
+          <a class="navbar-brand" href="#">Responsive Sidebar</a>
+          <a class="navbar-brand" href="#">Responsive Sidebar</a>
+          <a class="navbar-brand" href="#">Responsive Sidebar</a>
+          <a class="navbar-brand" href="#">Responsive Sidebar</a>
+          <a class="navbar-brand" href="#">Responsive Sidebar</a>
+          <a class="navbar-brand" href="#">Responsive Sidebar</a>
+          <a class="navbar-brand" href="#">Responsive Sidebar</a>
+          <a class="navbar-brand" href="#">Responsive Sidebar</a>
+          <a class="navbar-brand" href="#">Responsive Sidebar</a>
+          <a class="navbar-brand" href="#">Responsive Sidebar</a>
+          <a class="navbar-brand" href="#">Responsive Sidebar</a>
+          <a class="navbar-brand" href="#">Responsive Sidebar</a>
+          <a class="navbar-brand" href="#">Responsive Sidebar</a>
+          <a class="navbar-brand" href="#">Responsive Sidebar</a>
+        </div>
+      </div>
+    </nav>
+  
+    <!-- Sidebar -->
+    <div id="sidebar" class="sidebar">
+      <ul class="nav nav-pills nav-stacked">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+        <li>sdkcjhfsdiohfvosud</li>
+      </ul>
+    </div>
+  
+    <!-- Main Content -->
+    <div class="content">
+      <h1>Main Content</h1>
+      <p>This area occupies the remaining space.</p>
+    </div>
+  
+    <script src="path/to/jquery.min.js"></script>
+    <script src="path/to/bootstrap.min.js"></script>
+    <script>
+      // Sidebar toggle
+      $(document).ready(function () {
+        $(".navbar-toggle").click(function () {
+          $("#sidebar").toggleClass("active");
+        });
+      });
+  
+</script>
 
-  </script>
-</body>
-</html>
-
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/skulpt/0.10.0/skulpt.min.js"></script>
-<script src="assets/scripts/main.js"></script> -->
-
-
+          <footer>
+            <div class="container">
+                <br>
+              <div class="row">
+                <div class="col-lg-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s" id="center">
+                  <i class="fa fa-facebook fa-2x red-text"></i>
+                  <i class="fa fa-github fa-2x red-text"></i>
+                  <i class="fa fa-instagram fa-2x red-text"></i>
+                  <i class="fa fa-twitter fa-2x red-text"></i>
+                </div>
+                <div class="col-lg-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
+                  <p class="green-text">© Copyright 2024 AbleCode All Rights Reserved. 
+                </div>
+              </div>
+            </div>
+          </footer> 
+          <!-- Scripts-->
+          <script src="../lib/js/jquery/jquery.min.js"></script>
+          <script src="../lib/css/bootstrap/js/bootstrap.bundle.min.js"></script>
+          <script src="../scripts/owl-carousel.js"></script>
+          <script src="../scripts/animation.js"></script>
+          <script src="../scripts/imagesloaded.js"></script>
+          <script src="../scripts/main.js"></script>    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/skulpt/0.10.0/skulpt.min.js"></script>
+        <script src="assets/scripts/main.js"></script>
+    </body>
+    </html>
