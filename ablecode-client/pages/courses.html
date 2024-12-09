@@ -17,8 +17,6 @@
     <script src="../scripts/sign_up.js" type="module"></script>
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="../styles/index.css">
-    <link rel="stylesheet" href="../styles/components/styles-scratch-programming.css">
-    <link rel="stylesheet" href="../styles/components/styles-python-basics.css">
     <link href="../lib/css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="../lib/css/bootstrap/css/bootstrap.min.css.map" rel="stylesheet">
 
@@ -49,10 +47,7 @@ https://templatemo.com/tm-562-space-dynamic
              <!-- ***** Logo End ***** -->
              <!-- ***** Menu Start ***** -->
              <ul class="nav">
-               <li class="scroll-to-section" ><a href="scratch-programming.html" style="color: red !important;">Scratch</a></li>
-               <li class="scroll-to-section" ><a href="python-basics.html" style="color: red !important;">python</a></li>
-               <li class="scroll-to-section" ><a href="accessibility.html" style="color: red !important;">Accessibility</a></li>
-               <li class="scroll-to-section" ><a href="stem-modules.html" style="color: red !important;">PHET</a></li>
+               <li class="scroll-to-section" id="red-background"><a href="../index.html" style="color: yellow !important;">log out</a></li>
              </ul>        
              <a class='menu-trigger'>
                  <span>Menu</span>
@@ -63,46 +58,73 @@ https://templatemo.com/tm-562-space-dynamic
        </div>
      </div>
    </header>
-
    <div class="our-portfolio section">
     <div class="container">
       <div class="row">
         <div class="col-lg-6 offset-lg-3">
           <div class="section-heading  wow bounceIn" data-wow-duration="1s" data-wow-delay="0.2s">
-            <h2 class="red-text">PHET SIMULATION</h2>
-            <div class="top-text">
-              <h4 style="text-align: center; color: red; margin-top: -20px;">Learn the fundamentals and advance of PHET simulation </h4>
-           </div>
+            <h2 class="red-text">Choose course and continue</h2>
           </div>
         </div>
-        
-        <main class="row">
-            <h1>STEM Modules</h1>
-            <p>Explore interactive PHET simulations categorized by subjects:</p>
-            <select id="subjectFilter" onchange="filterSimulations()">
-                <option value="all">All Subjects</option>
-                <option value="physics">Physics</option>
-                <option value="math">Math</option>
-            </select>
-            <div id="simulationsList">
-                <!-- Example of PHET simulations list -->
-                <div class="simulation" data-category="physics">
-                    <h3>Force and Motion</h3>
-                    <button onclick="openSimulation('https://phet.colorado.edu/simulations/force-and-motion')">Try Now</button>
-                </div>
-                <div class="simulation" data-category="math">
-                    <h3>Graphing Lines</h3>
-                    <button onclick="openSimulation('https://phet.colorado.edu/simulations/graphing-lines')">Try Now</button>
-                </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-3 col-sm-6">
+          <a href="python-basics.html">
+            <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+              <div class="hidden-content">
+                <img src="../assets/images/python.png" alt="">
+              </div>
+              <div class="showed-content" id="yellow-background">
+                <h4 class="green-text" id="upper">python programming</h4>
+              </div>
             </div>
-        </main>
-    
-
-     </div>
+          </a>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <a href="stem-modules.html">
+            <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.4s">
+              <div class="hidden-content">
+                <img src="../assets/images/phet.png" alt="">
+              </div>
+              <div class="showed-content" id="yellow-background">
+                <h4 class="green-text" id="upper">PHET simulation</h4>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <a href="accessibility.html">
+            <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+              <div class="hidden-content">
+                <img src="../assets/images/sound.jpg" alt="">
+              </div>
+              <div class="showed-content" id="yellow-background">
+                <h4 class="green-text" id="upper">Accessibility feartures</h4>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <a href="scratch-programming.html">
+            <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.6s">
+              <div class="hidden-content">
+                <img src="../assets/images/scratch.png" alt="">
+              </div>
+              <div class="showed-content" id="yellow-background">
+                <h4 class="green-text" id="upper">Scratch Programming</h4>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
     </div>
-   </div>
-    <footer>
+  </div>
+
+
+     <footer>
         <div class="container">
+            <br>
+            <br>
             <br>
           <div class="row">
             <div class="col-lg-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s" id="center">
@@ -124,7 +146,5 @@ https://templatemo.com/tm-562-space-dynamic
       <script src="../scripts/animation.js"></script>
       <script src="../scripts/imagesloaded.js"></script>
       <script src="../scripts/main.js"></script>    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/skulpt/0.10.0/skulpt.min.js"></script>
-    <script src="assets/scripts/main.js"></script>
 </body>
 </html>

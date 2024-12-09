@@ -1,40 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>AbleCode</title>
+    <!-- main -->
+    <!-- <link rel="stylesheet" href="../styles/components/styles-sign-up.css"> -->
+    
+    <script src="../scripts/sign_up.js" type="module"></script>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/components/styles-accessibility.css">
+    <link href="../lib/css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../lib/css/bootstrap/css/bootstrap.min.css.map" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="../lib/css/fontawesome/fontawesome.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/animated.css">
+    <link rel="stylesheet" href="../styles/owl.css">
+<!--
+    
+TemplateMo 562 Space Dynamic
+
+https://templatemo.com/tm-562-space-dynamic
+
+-->
+  </head>
+  <body>
+    <!-- ***** Header Area Start ***** -->
+   <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s" id="yellow-background">
+     <div class="container">
+       <div class="row">
+         <div class="col-12">
+           <nav class="main-nav">
+             <!-- ***** Logo Start ***** -->
+             <a href="#" class="logo">
+               <h4 class="green-text">Able<span>Code</span></h4>
+             </a>
+             <!-- ***** Logo End ***** -->
+             <!-- ***** Menu Start ***** -->
+             <ul class="nav">
+               <li class="scroll-to-section" ><a href="scratch-programming.html" style="color: red !important;">Scratch</a></li>
+               <li class="scroll-to-section" ><a href="python-basics.html" style="color: red !important;">python</a></li>
+               <li class="scroll-to-section" ><a href="accessibility.html" style="color: red !important;">Accessibility</a></li>
+               <li class="scroll-to-section" ><a href="stem-modules.html" style="color: red !important;">PHET</a></li>
+             </ul>        
+             <a class='menu-trigger'>
+                 <span>Menu</span>
+             </a>
+             <!-- ***** Menu End ***** -->
+           </nav>
+         </div>
+       </div>
+     </div>
+   </header>
+
+   <div class="our-portfolio section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+          <div class="section-heading  wow bounceIn" data-wow-duration="1s" data-wow-delay="0.2s">
+            <h2 class="red-text">ACCESSIBILITY FEARTURES</h2>
+          </div>
+        </div>
+             <div class="row">
+                <h1>Accessibility Settings</h1>
+                <p>Customize your experience and use voice commands to navigate the page.</p>
+            </div>
+                <!-- Voice Command Section -->
+                <div class="setting row" id="row">
+
+                    <h2>Enable Voice Commands</h2>
+                    <p>Say commands like "Go to Header," "Go to Footer," or "Scroll to Main Content."</p>
+                    <button onclick="startVoiceRecognition()">Start Voice Commands</button>
+                    <p id="voice-status">Voice commands are currently off.</p>
+                </div>
+            
+                <header class="row">
+                    <h2>Website Header</h2>
+                    <p>This is the header of the website.</p>
+                </header>
+            
+                <section id="main" class="row">
+                    <h2>Main Content</h2>
+                    <p>This is the main content of the website.</p>
+                </section>
+            
+                <footer class="row">
+                    <h2>Website Footer</h2>
+                    <p>This is the footer of the website.</p>
+                </footer>
+            
+      
+    
+
+     </div>
+    </div>
+   </div>
+    <footer>
+        <div class="container">
+            <br>
+          <div class="row">
+            <div class="col-lg-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s" id="center">
+              <i class="fa fa-facebook fa-2x red-text"></i>
+              <i class="fa fa-github fa-2x red-text"></i>
+              <i class="fa fa-instagram fa-2x red-text"></i>
+              <i class="fa fa-twitter fa-2x red-text"></i>
+            </div>
+            <div class="col-lg-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
+              <p class="green-text">© Copyright 2024 AbleCode All Rights Reserved. 
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- Scripts -->
+      <script src="../lib/js/jquery/jquery.min.js"></script>
+      <script src="../lib/css/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <script src="../scripts/owl-carousel.js"></script>
+      <script src="../scripts/animation.js"></script>
+      <script src="../scripts/imagesloaded.js"></script>
+      <script src="../scripts/main.js"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/skulpt/0.10.0/skulpt.min.js"></script>
+    <script src="assets/scripts/main.js"></script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accessibility Settings</title>
-    <link rel="stylesheet" href="../styles/components/styles-accessibility.css">
+    <title>Accessibility Settings with Voice Commands</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        
+    </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="stem-modules.html">STEM Modules</a></li>
-                <li><a href="scratch-programming.html">Scratch Programming</a></li>
-                <li><a href="python-basics.html">Python Basics</a></li>
-                <li><a href="resources.html">Resources</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <h1>Accessibility Settings</h1>
-        
-        <h2>Font Size</h2>
-        <input type="range" id="fontSize" min="10" max="30" value="16">
-        
-        <h2>Color Contrast</h2>
-        <button onclick="toggleContrast()">Toggle High Contrast</button>
 
-        <h2>Text-to-Speech</h2>
-        <button onclick="toggleSpeech()">Toggle Text-to-Speech</button>
-    </main>
-    <footer>
-        <p>&copy; 2024 STEM Learning for Disabled Children. All rights reserved.</p>
-    </footer>
-    <script src="assets/scripts/main.js"></script>
+    <script>
+        function startVoiceRecognition() {
+            const status = document.getElementById('voice-status');
+            if (!('webkitSpeechRecognition' in window)) {
+                alert('Sorry, your browser does not support voice recognition.');
+                return;
+            }
+
+            const recognition = new webkitSpeechRecognition();
+            recognition.lang = 'en-US';
+            recognition.continuous = false;
+            recognition.interimResults = false;
+
+            recognition.onstart = () => {
+                status.textContent = 'Listening for commands...';
+                status.style.color = 'green';
+            };
+
+            recognition.onerror = (event) => {
+                status.textContent = 'Error occurred: ' + event.error;
+                status.style.color = 'red';
+            };
+
+            recognition.onend = () => {
+                status.textContent = 'Voice commands are off.';
+                status.style.color = 'blue';
+            };
+
+            recognition.onresult = (event) => {
+                const command = event.results[0][0].transcript.toLowerCase();
+                if (command.includes('header')) {
+                    document.querySelector('header').scrollIntoView({ behavior: 'smooth' });
+                } else if (command.includes('footer')) {
+                    document.querySelector('footer').scrollIntoView({ behavior: 'smooth' });
+                } else if (command.includes('main content')) {
+                    document.querySelector('#main').scrollIntoView({ behavior: 'smooth' });
+                } else {
+                    alert('Command not recognized: ' + command);
+                }
+            };
+
+            recognition.start();
+        }
+    </script>
 </body>
 </html>
