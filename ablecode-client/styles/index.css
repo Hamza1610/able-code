@@ -199,6 +199,15 @@ body, li, a, h1, h2 {
   }
   /* form */
   
+  /* assistance */
+  .sound{
+    width: 100px;
+    height: 100px;
+    right: 10px;
+    top: 50vh;
+    position: absolute;
+    position: fixed;
+  }
   /* media query */
   
   @media (max-width:980px) {
