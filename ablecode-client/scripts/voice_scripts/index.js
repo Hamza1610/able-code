@@ -23,6 +23,13 @@ const updateStatus = (status) => {
 document.getElementById('start-voice-btn').addEventListener("click", async () => {
     try {
         const userInput = await listenToVoice();
+        const networkErrorMessage = "Please connect to your internet";
+        if (userInput == networkErrorMessage) {
+            console.log(userInput);
+            speakMessage(userInput);
+            
+            return
+        }
         logCommand('User', userInput);
         const assistantResponse = await generateTextWithGemini(userInput); // this where to use Gemini
         const formatedText = convertMarkdownToHTML(assistantResponse);
