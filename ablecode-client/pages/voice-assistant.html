@@ -4,140 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Voice Assistant</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(120deg, #f6d365, #fda085);
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            overflow: hidden;
-        }
-
-        .voice-assistant-container {
-            background: #ffffff;
-            border-radius: 15px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-            width: 90%;
-            max-width: 500px;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .voice-assistant-header {
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 10px;
-            color: #333;
-        }
-
-        .assistant-status {
-            font-size: 18px;
-            color: #666;
-            margin-bottom: 20px;
-        }
-
-        .voice-command-log {
-            background: #f9f9f9;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            padding: 15px;
-            max-height: 150px;
-            overflow-y: auto;
-            margin-bottom: 20px;
-        }
-
-        .voice-command-log p {
-            font-size: 14px;
-            margin: 5px 0;
-        }
-
-        .voice-controls {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-        }
-
-        .control-button {
-            background: #4caf50;
-            color: white;
-            border: none;
-            border-radius: 50%;
-            width: 60px;
-            height: 60px;
-            font-size: 16px;
-            cursor: pointer;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-            transition: transform 0.2s ease;
-        }
-
-        .control-button:hover {
-            transform: scale(1.1);
-            background: #45a049;
-        }
-
-        .shutdown-button {
-            background: #e53935;
-        }
-
-        .shutdown-button:hover {
-            background: #d32f2f;
-        }
-    </style>
+    <link rel="stylesheet" href="../styles/components/voice-assistant.css">
 </head>
 <body>
-    <div class="voice-assistant-container">
-        <div class="voice-assistant-header">Voice Assistant</div>
-        <div class="assistant-status">Status: Listening...</div>
-        <div class="voice-command-log" id="command-log">
+    <button class="control-button open-btn" id="open-btn">Open</button>
+    <div class="voice-assistant-container hide-modal" id="voice-modal">
+        <div class="voice-label-div">
+            <div class="voice-assistant-header">Voice Assistant</div>
+            <button class="btn-close" id="close-modal">X</button>
+        </div>
+        <div class="voice-command-log modal" id="command-log">
             <!-- Commands will be logged here dynamically -->
         </div>
         <div class="voice-controls">
-            <button class="control-button" onclick="startListening()">Start</button>
-            <button class="control-button" onclick="stopListening()">Stop</button>
-            <button class="control-button shutdown-button" onclick="shutdownAssistant()">Shutdown</button>
+            <button class="control-button" id="start-voice-btn">Start</button>
+            <button class="control-button" id="stop-voice-btn">Stop</button>
+            <button class="control-button clear-button" id="clear-voice-btn">Clear</button>
         </div>
     </div>
 
-    <script>
-        const commandLog = document.getElementById('command-log');
-        let assistantRunning = true;
-
-        // Function to simulate logging commands
-        const logCommand = (message) => {
-            const p = document.createElement('p');
-            p.textContent = message;
-            commandLog.appendChild(p);
-            commandLog.scrollTop = commandLog.scrollHeight; // Auto-scroll to latest message
-        };
-
-        // Function to start listening
-        const startListening = () => {
-            logCommand('Assistant started listening...');
-            document.querySelector('.assistant-status').textContent = 'Status: Listening...';
-        };
-
-        // Function to stop listening
-        const stopListening = () => {
-            logCommand('Assistant paused.');
-            document.querySelector('.assistant-status').textContent = 'Status: Paused';
-        };
-
-        // Function to shutdown the assistant
-        const shutdownAssistant = () => {
-            if (assistantRunning) {
-                logCommand('Assistant shutting down...');
-                document.querySelector('.assistant-status').textContent = 'Status: Offline';
-                assistantRunning = false;
-            }
-        };
-
-        // Simulating voice commands
-        setTimeout(() => logCommand('User: Navigate to home page'), 2000);
-        setTimeout(() => logCommand('Assistant: Navigating to home page...'), 4000);
-    </script>
+    <script type="module" src="../scripts/voice_scripts/index.js"></script>
 </body>
 </html>
