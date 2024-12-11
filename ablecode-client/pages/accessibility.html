@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -75,123 +78,86 @@ https://templatemo.com/tm-562-space-dynamic
                 <h1>Accessibility Settings</h1>
                 <p>Customize your experience and use voice commands to navigate the page.</p>
             </div>
-                <!-- Voice Command Section -->
-                <div class="setting row" id="row">
-
-                    <h2>Enable Voice Commands</h2>
-                    <p>Say commands like "Go to Header," "Go to Footer," or "Scroll to Main Content."</p>
-                    <button onclick="startVoiceRecognition()">Start Voice Commands</button>
-                    <p id="voice-status">Voice commands are currently off.</p>
-                </div>
-            
-                <header class="row">
-                    <h2>Website Header</h2>
-                    <p>This is the header of the website.</p>
-                </header>
-            
-                <section id="main" class="row">
-                    <h2>Main Content</h2>
-                    <p>This is the main content of the website.</p>
-                </section>
-            
-                <footer class="row">
-                    <h2>Website Footer</h2>
-                    <p>This is the footer of the website.</p>
-                </footer>
-            
-      
-    
-
-     </div>
-    </div>
-   </div>
-    <footer>
-        <div class="container">
-            <br>
-          <div class="row">
-            <div class="col-lg-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s" id="center">
-              <i class="fa fa-facebook fa-2x red-text"></i>
-              <i class="fa fa-github fa-2x red-text"></i>
-              <i class="fa fa-instagram fa-2x red-text"></i>
-              <i class="fa fa-twitter fa-2x red-text"></i>
-            </div>
-            <div class="col-lg-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
-              <p class="green-text">© Copyright 2024 AbleCode All Rights Reserved. 
-            </div>
-          </div>
+    <div class="row">
+    <div class="voice-assistant-container">
+        <div class="voice-assistant-header">Voice Assistant</div>
+        <div class="assistant-status">Status: Listening...</div>
+        <div class="voice-command-log" id="command-log">
+            <!-- Commands will be logged here dynamically -->
         </div>
-      </footer>
-      <!-- Scripts -->
-      <script src="../lib/js/jquery/jquery.min.js"></script>
-      <script src="../lib/css/bootstrap/js/bootstrap.bundle.min.js"></script>
-      <script src="../scripts/owl-carousel.js"></script>
-      <script src="../scripts/animation.js"></script>
-      <script src="../scripts/imagesloaded.js"></script>
-      <script src="../scripts/main.js"></script>    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/skulpt/0.10.0/skulpt.min.js"></script>
-    <script src="assets/scripts/main.js"></script>
-</body>
-</html>
+        <div class="voice-controls">
+            <button class="control-button" onclick="startListening()">Start</button>
+            <button class="control-button" onclick="stopListening()">Stop</button>
+            <button class="control-button shutdown-button" onclick="shutdownAssistant()">Shutdown</button>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accessibility Settings with Voice Commands</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            padding: 20px;
-        }
-        
-    </style>
-</head>
-<body>
+<footer>
+    <div class="container">
+        <br>
+      <div class="row">
+        <div class="col-lg-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s" id="center">
+          <i class="fa fa-facebook fa-2x red-text"></i>
+          <i class="fa fa-github fa-2x red-text"></i>
+          <i class="fa fa-instagram fa-2x red-text"></i>
+          <i class="fa fa-twitter fa-2x red-text"></i>
+        </div>
+        <div class="col-lg-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
+          <p class="green-text">© Copyright 2024 AbleCode All Rights Reserved. 
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Scripts -->
+  <script src="../lib/js/jquery/jquery.min.js"></script>
+  <script src="../lib/css/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../scripts/owl-carousel.js"></script>
+  <script src="../scripts/animation.js"></script>
+  <script src="../scripts/imagesloaded.js"></script>
+  <script src="../scripts/main.js"></script>    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/skulpt/0.10.0/skulpt.min.js"></script>
+<script src="assets/scripts/main.js"></script>
 
     <script>
-        function startVoiceRecognition() {
-            const status = document.getElementById('voice-status');
-            if (!('webkitSpeechRecognition' in window)) {
-                alert('Sorry, your browser does not support voice recognition.');
-                return;
+        const commandLog = document.getElementById('command-log');
+        let assistantRunning = true;
+
+        // Function to simulate logging commands
+        const logCommand = (message) => {
+            const p = document.createElement('p');
+            p.textContent = message;
+            commandLog.appendChild(p);
+            commandLog.scrollTop = commandLog.scrollHeight; // Auto-scroll to latest message
+        };
+
+        // Function to start listening
+        const startListening = () => {
+            logCommand('Assistant started listening...');
+            document.querySelector('.assistant-status').textContent = 'Status: Listening...';
+        };
+
+        // Function to stop listening
+        const stopListening = () => {
+            logCommand('Assistant paused.');
+            document.querySelector('.assistant-status').textContent = 'Status: Paused';
+        };
+
+        // Function to shutdown the assistant
+        const shutdownAssistant = () => {
+            if (assistantRunning) {
+                logCommand('Assistant shutting down...');
+                document.querySelector('.assistant-status').textContent = 'Status: Offline';
+                assistantRunning = false;
             }
+        };
 
-            const recognition = new webkitSpeechRecognition();
-            recognition.lang = 'en-US';
-            recognition.continuous = false;
-            recognition.interimResults = false;
-
-            recognition.onstart = () => {
-                status.textContent = 'Listening for commands...';
-                status.style.color = 'green';
-            };
-
-            recognition.onerror = (event) => {
-                status.textContent = 'Error occurred: ' + event.error;
-                status.style.color = 'red';
-            };
-
-            recognition.onend = () => {
-                status.textContent = 'Voice commands are off.';
-                status.style.color = 'blue';
-            };
-
-            recognition.onresult = (event) => {
-                const command = event.results[0][0].transcript.toLowerCase();
-                if (command.includes('header')) {
-                    document.querySelector('header').scrollIntoView({ behavior: 'smooth' });
-                } else if (command.includes('footer')) {
-                    document.querySelector('footer').scrollIntoView({ behavior: 'smooth' });
-                } else if (command.includes('main content')) {
-                    document.querySelector('#main').scrollIntoView({ behavior: 'smooth' });
-                } else {
-                    alert('Command not recognized: ' + command);
-                }
-            };
-
-            recognition.start();
-        }
+        // Simulating voice commands
+        setTimeout(() => logCommand('User: Navigate to home page'), 2000);
+        setTimeout(() => logCommand('Assistant: Navigating to home page...'), 4000);
     </script>
 </body>
 </html>
