@@ -1,0 +1,137 @@
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(120deg, #f6d365, #fda085);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.voice-assistant-container {
+    position: fixed;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 800px;
+    padding: 20px;
+    text-align: center;
+}
+
+.voice-label-div {
+    display: flex;
+    justify-content: space-between;
+}
+.voice-assistant-header {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.assistant-status {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.voice-command-log {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    height: 400px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.voice-command-log p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.voice-controls {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.control-button {
+background: #4caf50;
+color: white;
+border: none;
+border-radius: 50%;
+width: 60px;
+height: 60px;
+font-size: 16px;
+cursor: pointer;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+transition: transform 0.2s ease;
+}
+.control-button:hover {
+transform: scale(1.1);
+background: #45a049;
+}
+
+.clear-button {
+background: #e53935;
+}
+
+.shutdown-button:hover {
+background: #d32f2f;
+}
+.chat-message {
+    
+    padding: 10px 15px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+    word-wrap: break-word;
+    display: block;
+}
+
+/* Assistant's messages */
+.assistant-message {
+align-self: flex-start;  /* Align to the left */
+background-color: #e3e3e3;
+color: #333;
+max-width: 80%;
+text-align: justify; /* Align to the left for the Assistant */
+}
+
+/* User's messages */
+.user-message {
+align-self: flex-end;  /* Align to the right */
+max-width: 80%;
+background-color: #4CAF50;
+color: white;
+text-align: justify; /* Align to the right for the User */
+}
+.btn-close {
+padding: 0px 10px;
+margin: 5px;
+border-style: none;
+font-size: larger;
+
+}
+.hide-modal {
+visibility: hidden;
+}
+
+.show-model {
+visibility: visible;
+}
+.open-btn {
+position: absolute;
+margin-left: 80%;
+bottom: 50px;
+}
