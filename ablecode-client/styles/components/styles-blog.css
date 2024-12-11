@@ -51,21 +51,27 @@
     position: fixed;
     top: 20px;
     left: 20px;
-    background-color: green;
-    color: #fff;
+    background-color: yellow;
+    color: red;
+    box-shadow: #f0f0f0;
     border: none;
     padding: 10px;
     font-size: 16px;
     cursor: pointer;
+    overflow: visible;
   }
       .lesson{
-          width: 90%;
+          width: 100%;
           height: max-content;
           background-color: whitesmoke;
+          color: green;
           padding: 20px;
           box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.1);
           border-radius: 20px;
           margin-bottom: 30px;
+      }
+      .lesson p{
+        color: green;
       }
   
   .main-content {
@@ -73,7 +79,20 @@
     padding: 20px;
     width: 100vw;
   }
-  
+  iframe{
+    width: 100%;
+    margin: 0 auto;
+  }
+  li a{
+    text-decoration: none;
+    font-size: 3vmin;
+    color: red;
+    font-weight: 200;
+  }
+  .aside-bar h2{
+    color: green;
+  }
+
   /* Desktop Styles */
   @media (min-width: 768px) {
     .container {
@@ -86,6 +105,7 @@
       height: auto;
       box-shadow: none;
       transform: translateX(0);
+      height: 100vh;
     }
           .main-content{
               margin-left: 20%;
