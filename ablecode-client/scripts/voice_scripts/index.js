@@ -21,15 +21,17 @@ const updateStatus = (status) => {
 
 // Start listening
 document.getElementById('start-voice-btn').addEventListener("click", async () => {
+    // probable error message
+    const networkErrorMessage = "Please connect to your internet";
+    const hardwareError = "no-speech";
     try {
         const userInput = await listenToVoice();
-        const networkErrorMessage = "Please connect to your internet";
         if (userInput == networkErrorMessage) {
             console.log(userInput);
             speakMessage(userInput);
-            
             return
         }
+
         logCommand('User', userInput);
         const assistantResponse = await generateTextWithGemini(userInput); // this where to use Gemini
         const formatedText = convertMarkdownToHTML(assistantResponse);
@@ -40,6 +42,11 @@ document.getElementById('start-voice-btn').addEventListener("click", async () =>
     } catch (error) {
         logCommand('Assistant', 'An error occurred while listening.');
         console.error(error);
+
+        if (error === hardwareError) {
+            speakMessage('Please check your mic, there is a problem. I cannot listen to you.');
+            return
+        }
     }
 });
 

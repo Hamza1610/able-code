@@ -19,6 +19,17 @@ signUpEmailPasswordButton.addEventListener('click', (event) => {
     var password = document.getElementById('password').value
     console.log(email, password);
     signUpWithEmailPassword(email, password);
+    setTimeout(() => {
+        const hostname = window.location.hostname;
+        let href = window.location.href
+
+
+        console.log(hostname, href);
+        href =  hostname + 'able-code/ablecode-client/page' + '/courses.html';
+        console.log(href)
+        window.location.href = href
+    }, 3000)
+
 })
 
 // Sign In with Email and Password Button
