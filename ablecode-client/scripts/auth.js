@@ -22,12 +22,12 @@ signUpEmailPasswordButton.addEventListener('click', (event) => {
     setTimeout(() => {
         const hostname = window.location.hostname;
         let href = window.location.href
-
-
-        console.log(hostname, href);
-        href =  hostname + 'able-code/ablecode-client/page' + '/courses.html';
-        console.log(href)
-        window.location.href = href
+        const basePath = 'able-code/ablecode-client/page';
+        const targetPage = '/courses.html';
+        href = `${window.location.origin}/${basePath}${targetPage}`;
+        window.location.href = '/ablecode-client/pages/courses.html'; // Replace '/dashboard' with your desired page
+        console.log(href);
+        // window.location.href = href
     }, 3000)
 
 })
