@@ -16,7 +16,9 @@
     <title>AbleCode</title>
     <!-- main -->
     <!-- <link rel="stylesheet" href="../styles/components/styles-sign-up.css"> -->
-    
+        <!-- Voice assitant style  link-->
+        <link rel="stylesheet" href="../styles/components/voice-assistant.css">
+
     <script src="../scripts/sign_up.js" type="module"></script>
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="../styles/index.css">
@@ -84,16 +86,18 @@ https://templatemo.com/tm-562-space-dynamic
                 <p>Customize your experience and use voice commands to navigate the page.</p>
             </div>
     <div class="row">
-    <div class="voice-assistant-container">
-        <div class="voice-assistant-header">Voice Assistant</div>
-        <div class="assistant-status">Status: Listening...</div>
+      <div class="voice-assistant-container hide-modal" id="voice-modal">
+        <div class="voice-label-div">
+            <div class="voice-assistant-header">Voice Assistant</div>
+            <button class="btn-close" id="close-modal">X</button>
+        </div>
         <div class="voice-command-log" id="command-log">
             <!-- Commands will be logged here dynamically -->
         </div>
         <div class="voice-controls">
-            <button class="control-button" onclick="startListening()">Start</button>
-            <button class="control-button" onclick="stopListening()">Stop</button>
-            <button class="control-button shutdown-button" onclick="shutdownAssistant()">Shutdown</button>
+            <button class="control-button" id="start-voice-btn">Start</button>
+            <button class="control-button" id="stop-voice-btn">Stop</button>
+            <button class="control-button clear-button" id="clear-voice-btn">Clear</button>
         </div>
     </div>
 </div>
@@ -126,43 +130,8 @@ https://templatemo.com/tm-562-space-dynamic
   <script src="../scripts/main.js"></script>    
 <script src="https://cdnjs.cloudflare.com/ajax/libs/skulpt/0.10.0/skulpt.min.js"></script>
 <script src="assets/scripts/main.js"></script>
+<!-- Voice assistant script -->
+<script type="module" src="../scripts/voice_scripts/index.js"></script>
 
-    <script>
-        const commandLog = document.getElementById('command-log');
-        let assistantRunning = true;
-
-        // Function to simulate logging commands
-        const logCommand = (message) => {
-            const p = document.createElement('p');
-            p.textContent = message;
-            commandLog.appendChild(p);
-            commandLog.scrollTop = commandLog.scrollHeight; // Auto-scroll to latest message
-        };
-
-        // Function to start listening
-        const startListening = () => {
-            logCommand('Assistant started listening...');
-            document.querySelector('.assistant-status').textContent = 'Status: Listening...';
-        };
-
-        // Function to stop listening
-        const stopListening = () => {
-            logCommand('Assistant paused.');
-            document.querySelector('.assistant-status').textContent = 'Status: Paused';
-        };
-
-        // Function to shutdown the assistant
-        const shutdownAssistant = () => {
-            if (assistantRunning) {
-                logCommand('Assistant shutting down...');
-                document.querySelector('.assistant-status').textContent = 'Status: Offline';
-                assistantRunning = false;
-            }
-        };
-
-        // Simulating voice commands
-        setTimeout(() => logCommand('User: Navigate to home page'), 2000);
-        setTimeout(() => logCommand('Assistant: Navigating to home page...'), 4000);
-    </script>
 </body>
 </html>

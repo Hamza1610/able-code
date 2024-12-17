@@ -13,7 +13,9 @@
     <title>AbleCode</title>
     <!-- main -->
     <!-- <link rel="stylesheet" href="../styles/components/styles-sign-up.css"> -->
-    
+        <!-- Voice assitant style  link-->
+        <link rel="stylesheet" href="../styles/components/voice-assistant.css">
+
     <script src="../scripts/sign_up.js" type="module"></script>
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="../styles/index.css">
@@ -203,10 +205,26 @@ https://templatemo.com/tm-562-space-dynamic
             </div>
         </footer> 
 
-                    <!-- assistance -->
-                    <div class="sound">
-                      <i class="fa fa-volume-up fa-3x red-text" ></i>
-                    </div>
+        <!-- Voice assistant elements -->
+        <!-- assistance -->
+        <button class="control-button open-btn" id="open-btn">
+          <i class="fa fa-volume-up fa-3x red-text" ></i>
+        </button>
+        <div class="voice-assistant-container hide-modal" id="voice-modal">
+          <div class="voice-label-div">
+              <div class="voice-assistant-header">Voice Assistant</div>
+              <button class="btn-close" id="close-modal">X</button>
+          </div>
+          <div class="voice-command-log" id="command-log">
+              <!-- Commands will be logged here dynamically -->
+
+          </div>
+          <div class="voice-controls">
+              <button class="control-button" id="start-voice-btn">Start</button>
+              <button class="control-button" id="stop-voice-btn">Stop</button>
+              <button class="control-button clear-button" id="clear-voice-btn">Clear</button>
+          </div>
+        </div>
 
                 <!-- Scripts-->
                 <script src="../lib/js/jquery/jquery.min.js"></script>
@@ -226,6 +244,9 @@ https://templatemo.com/tm-562-space-dynamic
                         asideBar.classList.toggle('hide');
                     });
                 </script>
+                <!-- Voice assistant script -->
+                <script type="module" src="../scripts/voice_scripts/index.js"></script>
+
 
 </body>
 </html>
