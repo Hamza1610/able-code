@@ -3,6 +3,10 @@
 body, li, a, h1, h2 {
     font-family: sans-serif;
   }
+  .able-label {
+    color: rgb(20, 224, 20);
+    text-shadow: black 10px;
+  }
   .nav  li a{
       font-size: 3vmin !important;
   }
@@ -13,12 +17,15 @@ body, li, a, h1, h2 {
   
   /* Red, Green, and Yellow Color Classes */
   .red-text {
-      color: red !important; /* 15% Red */
+      color: red; /* 15% Red */
       font-weight: bold;
+    }
+    .blue-text {
+      color: #1c5fc5;
     }
     
     .green-text {
-      color: green !important ; /* 40% Green */
+      color: green; /* 40% Green */
     }
     
     .yellow-text {
@@ -33,9 +40,14 @@ body, li, a, h1, h2 {
       background-color: green !important; /* 40% Green */
       color: yellow !important ;
     }
+
+    #form-btn {
+      background-color: #1c5fc5;
+    }
     
     #yellow-background {
-      background-color: #0d6efd ; /* 55% Yellow */
+    
+      background-color: #1c5fc5 ; /* 55% Yellow */
     }
     .icons{
       background-color: yellow !important ;
@@ -52,7 +64,7 @@ body, li, a, h1, h2 {
     
     /* Customize the navigation links */
     .nav li a {
-      color: green !important; /* Default red link color */
+      color: rgb(20, 224, 20) !important; /* Default red link color */
       font-size: 2.5vmin !important;
       font-weight: 900 !important;
     }
@@ -131,7 +143,7 @@ body, li, a, h1, h2 {
   }
   .center{
     text-align: center !important;
-    color: green !important;
+    color: green;
   }
   #team{
     display: flex;
@@ -164,7 +176,9 @@ body, li, a, h1, h2 {
   #faq, #bg-t{
     background-image: url('../assets/images/change.png') !important;
   }
-  
+  .faq-text {
+    color: red;
+  }
   /* footer */
   #center{
     width: 200px;
@@ -172,6 +186,9 @@ body, li, a, h1, h2 {
     display: flex;
     justify-content: space-around;
     align-items: center;
+  }
+  .dev-name {
+    color: white;
   }
   #center i{
     width: 50px !important;

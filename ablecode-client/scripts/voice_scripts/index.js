@@ -29,6 +29,7 @@ document.getElementById('start-voice-btn').addEventListener("click", async () =>
         if (userInput == networkErrorMessage) {
             console.log(userInput);
             speakMessage(userInput);
+            logCommand('Assistant', userInput);
             return
         }
 
